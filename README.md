@@ -81,8 +81,41 @@ For more usage options and examples, see the `examples/` directory or explore th
 
 ## Results
 
-- After classification, results are stored in the `results/` directory.
-- Visualization scripts are available in `notebooks/` for deeper analysis.
+### Processing Intensity Scoring Results
+
+The proposed Processing Intensity Score (PIS) was computed for all 270 culinary processes
+using the weighted combination of:
+- **Word Complexity Score (WCS)**
+- **Embedding Dispersion Score (EDS)**
+- **Cluster Transition Difficulty Score (CTDS)**
+
+#### Top Five Most Intense Processes
+
+| Process   | Cluster | WCS   | EDS   | CTDS  | PIS   |
+|-----------|---------|-------|-------|-------|-------|
+| splutter  | 1       | 0.513 | 0.945 | 0.972 | 0.812 |
+| deflate   | 3       | 0.410 | 0.903 | 0.922 | 0.747 |
+| stream    | 7       | 0.321 | 0.910 | 0.988 | 0.742 |
+| crimp     | 6       | 0.218 | 1.000 | 1.000 | 0.742 |
+| floured   | 3       | 0.423 | 0.846 | 0.883 | 0.719 |
+
+#### Cluster-Level Processing Intensity
+
+The average PIS for each KMeans cluster is reported below. Higher values indicate clusters
+consisting of more complex or effort-intensive cooking processes.
+
+| Cluster | Mean PIS |
+|---------|----------|
+| 3       | 0.4575   |
+| 4       | 0.4446   |
+| 6       | 0.4359   |
+| 7       | 0.4047   |
+| 0       | 0.4044   |
+| 1       | 0.3854   |
+| 2       | 0.3392   |
+| 5       | 0.3276   |
+
+Cluster 3 is identified as the **most processing-intensive group**, while Cluster 5 represents the **least intensive group**.
 
 ## Contributing
 
